@@ -1,14 +1,16 @@
 <script setup>
 import navbar from './components/Navbar.vue'
+import leftPad from './components/LeftPad.vue'
 </script>
 
 <template>
-  <navbar title="Analysts" />
+  <navbar title="Analytics" />
+  <left-pad />
 </template>
 
 <style lang="scss">
 @import 'assets/variables';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 html {
   font-family: Poppins, sans-serif;

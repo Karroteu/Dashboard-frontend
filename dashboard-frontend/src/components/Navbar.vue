@@ -45,19 +45,25 @@ defineProps({
 
   .navbar__left-part {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: $side-panel-width;
     border: solid 1px $border-color;
     align-items: center;
 
+    > * {
+      margin: 0 1rem;
+    }
+
     .navbar__left-part__logo {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       gap: 0.5rem;
       cursor: default;
 
       img {
         width: 2rem;
+        height: 2rem;
       }
     }
 
@@ -88,8 +94,12 @@ defineProps({
     justify-content: space-between;
     align-items: center;
     border: solid 1px $border-color;
-    width: 100%;
-    padding: 0 1rem;
+    border-left: none;
+    width: calc(100vw - $side-panel-width);
+
+    > * {
+      margin: 0 1rem;
+    }
 
     .navbar__top-part__actions {
       display: flex;
@@ -97,10 +107,14 @@ defineProps({
       align-items: center;
 
       .navbar__top-part__actions__more {
+        display: flex;
         width: 3rem;
+        align-items: center;
+        justify-content: center;
 
         > * {
           color: $font-dark-color;
+          font-size: 1.25rem;
         }
       }
     }

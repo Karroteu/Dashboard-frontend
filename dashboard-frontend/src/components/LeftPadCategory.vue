@@ -1,13 +1,15 @@
 <script setup>
 
 defineProps({
-  primary: Boolean,
+  icon: String,
+  active: Boolean,
 })
 
 </script>
 
 <template>
   <button :class="{ button__primary: primary, button__secondary: !primary }">
+    <font-awesome-icon v-if="icon === 'book'" icon="fa-solid fa-book" />
     <slot></slot>
   </button>
 </template>
