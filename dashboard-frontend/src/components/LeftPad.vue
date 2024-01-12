@@ -44,6 +44,7 @@ import inbox from '../components/Inbox.vue'
         color: $font-dark-color;
         font-size: 1rem;
         font-weight: 500;
+        cursor: default;
     }
 
     .left-pad__section__team {

@@ -56,6 +56,7 @@ button {
   &::after {
     content: '(You)';
     font-size: 0.925rem;
+    color: $font-dark-color;
   }
 }
 </style>

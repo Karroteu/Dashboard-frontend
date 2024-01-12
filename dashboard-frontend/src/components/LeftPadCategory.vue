@@ -35,7 +35,7 @@ button {
     opacity: 0.9;
     cursor: pointer;
     box-shadow: 0 0.125rem 0.25rem $font-dark-color;
-    background-position-y: 80%;
+    background-position: 60%;
   }
 }
 
