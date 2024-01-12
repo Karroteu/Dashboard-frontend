@@ -9,11 +9,16 @@ import inbox from '../components/Inbox.vue'
     <div class="left-pad">
         <search-bar label="Search" />
         <h3 class="left-pad__section-labels">Main</h3>
-        <category icon="book">Contracts</category>
-        <category icon="chart" active>Analytics</category>
-        <category icon="gear" >Settings</category>
+        <div class="left-pad__section__categories">
+            <category icon="book">Contracts</category>
+            <category icon="chart" active>Analytics</category>
+            <category icon="gear" >Settings</category>
+        </div>
         <h3 class="left-pad__section-labels">Inboxes</h3>
-        <inbox label="Clients" number="(+48) 800 800 800" />
+        <div class="left-pad__section__inboxes">
+            <inbox label="Clients" number="(+48) 800 800 800" />
+            <inbox label="Personal" number="(+48) 780 600 300" />
+        </div>
         <h3 class="left-pad__section-labels">Team</h3>
         <div class="left-pad__section__team">
             <user-listing is-you>Dianne Russell</user-listing>
@@ -45,6 +50,21 @@ import inbox from '../components/Inbox.vue'
         font-size: 1rem;
         font-weight: 500;
         cursor: default;
+        margin: 0.75rem 1rem;
+    }
+
+    .left-pad__section__categories {
+        margin: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .left-pad__section__inboxes {
+        margin: 0.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .left-pad__section__team {

@@ -4,7 +4,7 @@
       <font-awesome-icon icon="fa-solid fa-envelope" />
     </div>
     <div class="inbox__text">
-      <span>{{ label }}</span>
+      <span class="icon__text__title">{{ label }}</span>
       <span class="icon__text__number">{{ number }}</span>
     </div>
   </div>
@@ -39,6 +39,10 @@ defineProps({
       color: $background-color;
       opacity: 0.85;
     }
+  }
+
+  .icon__text__title {
+    font-weight: 600;
   }
 
   .inbox__text {

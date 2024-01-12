@@ -23,6 +23,7 @@ button {
   border: none;
   font-size: 1rem;
   font-family: Poppins, sans-serif;
+  font-weight: 600;
   transition: 300ms;
   min-height: 3rem;
   padding: 0 1rem;
