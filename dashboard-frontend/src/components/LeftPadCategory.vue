@@ -8,8 +8,10 @@ defineProps({
 </script>
 
 <template>
-  <button :class="{ button__primary: primary, button__secondary: !primary }">
-    <font-awesome-icon v-if="icon === 'book'" icon="fa-solid fa-book" />
+  <button :class="{ button__active: active, button__default: !active }">
+    <font-awesome-icon class="left-pad-category__icon" v-if="icon === 'book'" icon="fa-solid fa-book" />
+    <font-awesome-icon class="left-pad-category__icon" v-if="icon === 'chart'" icon="fa-solid fa-chart-line" />
+    <font-awesome-icon class="left-pad-category__icon" v-if="icon === 'gear'" icon="fa-solid fa-gear" />
     <slot></slot>
   </button>
 </template>
@@ -19,29 +21,37 @@ defineProps({
 
 button {
   border-radius: 1rem;
+  border: none;
   font-size: 1rem;
   font-family: Poppins, sans-serif;
   transition: 300ms;
   min-height: 3rem;
-  padding: 0 0.75rem;
+  padding: 0 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 
   &:hover {
     opacity: 0.9;
     cursor: pointer;
     box-shadow: 0 0.125rem 0.25rem $font-dark-color;
+    background-position-y: 80%;
   }
 }
 
-.button__primary {
-  background: linear-gradient($primary-color, $primary-color-darker);
-  border: solid 1px $primary-color-darker;
-  color: $font-light-color;
-  text-shadow: 0 0 0.25rem $secondary-color;
+.left-pad-category__icon {
+  color: $font-dark-color;
+}
+
+.button__active {
+  // background: linear-gradient($primary-color, $primary-color-darker);
+  background: url('../assets/background.webp');
+  background-size: cover;
+  text-shadow: 0 0 0.25rem $background-color;
   transition: 300ms;
 }
 
-.button__secondary {
+.button__default {
   background: none;
-  border: solid 1px $border-color;
 }
 </style>

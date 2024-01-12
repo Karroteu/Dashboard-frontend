@@ -1,6 +1,8 @@
 <script setup>
-import customButton from '../components/Button.vue'
+// import customButton from '../components/Button.vue'
 import category from '../components/LeftPadCategory.vue'
+import userListing from '../components/UserListing.vue'
+import inbox from '../components/Inbox.vue'
 </script>
 
 <template>
@@ -8,13 +10,16 @@ import category from '../components/LeftPadCategory.vue'
         <search-bar label="Search" />
         <h3 class="left-pad__section-labels">Main</h3>
         <category icon="book">Contracts</category>
-        <category icon="" active>Analytics</category>
-        <category>Settings</category>
+        <category icon="chart" active>Analytics</category>
+        <category icon="gear" >Settings</category>
         <h3 class="left-pad__section-labels">Inboxes</h3>
+        <inbox label="Clients" number="(+48) 800 800 800" />
         <h3 class="left-pad__section-labels">Team</h3>
-        <custom-button>Dianne Russell</custom-button>
-        <custom-button>Kristin Watson</custom-button>
-        <custom-button>Albert Flores</custom-button>
+        <div class="left-pad__section__team">
+            <user-listing is-you>Dianne Russell</user-listing>
+            <user-listing>Kristin Watson</user-listing>
+            <user-listing>Albert Flores</user-listing>
+        </div>
     </div>
 </template>
 
@@ -39,6 +44,10 @@ import category from '../components/LeftPadCategory.vue'
         color: $font-dark-color;
         font-size: 1rem;
         font-weight: 500;
+    }
+
+    .left-pad__section__team {
+        margin-top: 0.5rem;
     }
 }
 </style>
