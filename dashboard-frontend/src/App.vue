@@ -1,11 +1,15 @@
 <script setup>
 import navbar from './components/Navbar.vue'
 import leftPad from './components/LeftPad.vue'
+import content from './components/Content.vue'
 </script>
 
 <template>
   <navbar title="Analytics" />
-  <left-pad />
+  <div class="center">
+    <left-pad />
+    <content />
+  </div>
 </template>
 
 <style lang="scss">
@@ -19,6 +23,11 @@ html {
 
 body {
   margin: 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {

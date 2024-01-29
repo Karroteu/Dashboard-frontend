@@ -34,11 +34,12 @@ import inbox from '../components/Inbox.vue'
 .left-pad {
     display: flex;
     flex-direction: column;
-    width: calc($side-panel-width - 1px);
+    width: calc($side-panel-width);
     border: solid 1px $border-color;
     border-top: none;
     padding: 0;
     height: calc(100vh - 5rem);
+    overflow-y: auto;
 
     > * {
         margin: 0 1rem;
